@@ -1,6 +1,7 @@
 def call() {
-    sh "trivy fs ."
+    sh 'trivy fs --timeout 10m --scanners vuln .'
 }
+
 // def call() {
 //     sh '''
 //         docker run --rm \
